@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.2",
     "web-setup-cli": "^1.0.0"
   }
 }
