@@ -20,5 +20,5 @@ To setup this source code (requires nodejs, npm installed globally on your machi
 
 ## Production
 
-1. Do a `npm run start:server` to start the data server for AJAX purpose.
+1. Do a `npm run start:server` or `node server.js` to start the data server for AJAX purpose.
 2. Open `dest/index.html` with browser.
