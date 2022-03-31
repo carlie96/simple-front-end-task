@@ -1,13 +1,11 @@
 .news-today {
   h1 {
-    font-family: Roboto;
     font-size: 32px;
     font-weight: bold;
     line-height: 43px;
     padding-bottom: 30px;
   }
   h2 {
-    font-family: "Roboto";
     font-size: 16px;
     line-height: 21px;
     font-weight: normal;
@@ -27,33 +25,36 @@
   margin-top: 100px;
 }
 
-@media only screen and (max-width: 600px) {
+#news-container {
+  padding-bottom: 80px;
+}
+
+@include media-breakpoint-down(lg) {
   .news-today {
     h1 {
-      font-family: Roboto;
       font-size: 24px;
-      font-weight: bold;
       line-height: 32px;
       padding-bottom: 13px;
     }
     h2 {
-      font-family: "Roboto";
       font-size: 14px;
       line-height: 19px;
-      font-weight: normal;
-      color: #7c0102;
     }
     h3 {
-      font-family: "Helvetica Neue";
       font-size: 16px;
       line-height: 18px;
-      font-weight: normal;
     }
-    hr {
-      background-color: #707070;
-    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .news-today {
     padding-left: 28.5px;
     padding-right: 28.5px;
     margin-top: 22px;
+  }
+
+  #news-container {
+    padding-bottom: 35px;
   }
 }

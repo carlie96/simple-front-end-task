@@ -1,0 +1,25 @@
+@import "_variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+h1,
+h2,
+h3 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+html {
+  font-family: Roboto;
+}
+
+@import "home";
+@import "carousel";
+@import "news-today";
+@import "header";
+@import "footer";
+
+//override slick button
+.slick-prev:before,
+.slick-next:before {
+  color: #707070;
+}

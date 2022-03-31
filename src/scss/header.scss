@@ -1,0 +1,85 @@
+@each $breakpoint, $height in $navbar-height {
+  @include media-breakpoint-up($breakpoint) {
+    .navbar {
+      height: $height !important;
+    }
+
+    .header-container {
+      height: $height;
+    }
+  }
+}
+
+@each $breakpoint, $margin in $navbar-margin {
+  @include media-breakpoint-up($breakpoint) {
+    .navbar-brand {
+      margin-left: $margin;
+    }
+
+    .navbar-collapse.navbar-collapse {
+      margin-right: $margin;
+    }
+  }
+}
+
+@each $breakpoint, $size in $navbar-brand-image-size {
+  @include media-breakpoint-up($breakpoint) {
+    .navbar-brand {
+      img {
+        width: nth($size, 1);
+        height: nth($size, 2);
+      }
+    }
+  }
+}
+
+@each $breakpoint, $size in $nav-link-size {
+  @include media-breakpoint-up($breakpoint) {
+    .nav-link {
+      font-size: nth($size, 1);
+      line-height: nth($size, 2);
+    }
+  }
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 384px;
+}
+
+@include media-breakpoint-down(lg) {
+  .navbar-collapse {
+    background-color: $primary !important;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .nav-link {
+    color: white !important;
+  }
+
+  .navbar-nav {
+    width: 100%;
+  }
+}

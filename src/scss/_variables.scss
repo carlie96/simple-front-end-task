@@ -1,0 +1,39 @@
+$primary: #498fcc;
+
+// Nav bar
+$navbar-height: (
+  "xs": 50px,
+  "lg": 100px,
+);
+$navbar-margin: (
+  "xs": 0,
+  "lg": 140px,
+);
+$navbar-padding-y: 0 !default;
+$navbar-padding-x: 0 !default;
+
+// {breakpoint: [width, height]}
+$navbar-brand-image-size: (
+  "xs": (
+    155.68px,
+    25px,
+  ),
+  "lg": (
+    274px,
+    44px,
+  ),
+);
+
+// {breakpoint: [font-size, line-height]}
+$nav-link-size: (
+  "xs": (
+    16px,
+    21px,
+  ),
+  "lg": (
+    20px,
+    26px,
+  ),
+);
+
+$nav-link-color: #7b7b7b;

@@ -1,0 +1,79 @@
+.carousel {
+  display: flex;
+  height: 712px;
+  justify-content: center;
+  .slider {
+    margin-top: 100px;
+    width: 1160px;
+    height: 612px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    .slide {
+      position: relative;
+      .description {
+        position: absolute;
+        display: grid;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        place-content: center;
+        width: 500px;
+        height: 150px;
+        font-size: 32px;
+        line-height: 43px;
+        font-family: Roboto;
+        font-weight: bold;
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+      }
+    }
+  }
+}
+
+$carousel-dimension: (
+  "xxl": (
+    // Not designed by mock up, I feel like this is more comfortable to look for sm - xxl display
+    "height": 100%,
+    "slider-margin-top": 100px,
+    "slider-width": 80%,
+    "slider-height": 80%,
+    "slide-description-width": 50%,
+    "slide-description-height": 25%,
+    "slide-description-font-size": 18px,
+    "slide-description-line-height": 23px,
+  ),
+  "sm": (
+    "height": 228px,
+    "slider-margin-top": 48px,
+    "slider-width": 320px,
+    "slider-height": 180px,
+    "slide-description-width": 144px,
+    "slide-description-height": 44px,
+    "slide-description-font-size": 16px,
+    "slide-description-line-height": 21px,
+  ),
+);
+
+@each $breakpoint, $dimension in $carousel-dimension {
+  @include media-breakpoint-down($breakpoint) {
+    .carousel {
+      height: map-get($dimension, "height");
+      .slider {
+        margin-top: map-get($dimension, "slider-margin-top");
+        width: map-get($dimension, "slider-width");
+        height: map-get($dimension, "slider-height");
+        .slide {
+          .description {
+            width: map-get($dimension, "slide-description-width");
+            height: map-get($dimension, "slide-description-height");
+            font-size: map-get($dimension, "slide-description-font-size");
+            line-height: map-get($dimension, "slide-description-line-height");
+          }
+        }
+      }
+    }
+  }
+}
