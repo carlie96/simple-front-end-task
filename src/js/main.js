@@ -34,13 +34,11 @@
     // News Today AJAX
     $.ajax({
       type: "GET",
-      url: "data/news.json",
-      data: { get_param: "value" },
+      url: "http://localhost:3000",
       dataType: "json",
       success: function (data) {
         $("#news-container").innerHTML = "";
         $.each(data, function (_, element) {
-          console.log(element);
           $("#news-container").append(
             `<h2>${element.date}</h2>
             <h3>${element.headline}</h3>
